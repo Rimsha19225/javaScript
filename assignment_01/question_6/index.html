@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My HTML & CSS Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f4f4f4;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hello, User!</h1>
+  <p>Click the button to get a welcome message.</p>
+
+  <button onclick="showAlert()">Click Me</button>
+
+  <script>
+    function showAlert() {
+      alert("Welcome to My HTML & CSS Project!");
+    }
+  </script>
+
+</body>
+</html>
