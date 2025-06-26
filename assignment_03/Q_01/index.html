@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>If Else use </title>
+        <style>
+        * {
+            box-sizing: border-box;
+        }
+        .body{
+            width: 100%;
+            height: auto;
+            background-color: black;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+            overflow-x: hidden;
+            color:bisque;
+        }
+        .number_check_area{
+            padding: 1.1rem 0rem;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        #input1, #input2, #input3{
+            width: 50%;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            color: darkblue;
+            margin-top: 15px;
+        }
+        .button{
+            padding: 0.9rem;
+            border: none;
+            border-radius: 0.8rem;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+        }
+        .button:hover{
+            background-color: #ed4444;
+        }
+        .roll{
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body class="body">
+    <h1>Name : Rimsha</h1>
+    <h2>Roll No: 00346</h2>
+    <h2 class="roll">Topic: if, else if, else</h2>
+    <hr/><hr/><hr/>
+    <div class="number_check_area">
+        <h2>"Check Number is Positive or Negative"</h2>
+        <input type="number" id="input1" placeholder="Enter a number... ">
+        <p id="output1"></p>
+        <button onclick="getNumber()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div class="number_check_area">
+        <h2>"Check Voter Age"</h2>
+        <input type="number" id="input2" placeholder="Enter a voter age... ">
+        <p id="output2"></p>
+        <button onclick="getVoter()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div class="number_check_area">
+        <h2>"Check Password Matched"</h2>
+        <input type="number" id="input3" placeholder="Enter a password... ">
+        <input type="number" id="input4" placeholder="Enter a confirm password... ">
+        <p id="output3"></p>
+        <button onclick="getPassword()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div class="number_check_area">
+        <h2>"Check Student Grade"</h2>
+        <input type="number" id="input5" placeholder="Enter a marks out of 100... ">
+        <p id="output4"></p>
+        <button onclick="getGrade()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div class="number_check_area">
+        <h2>"Check Weather"</h2>
+        <input type="number" id="input6" placeholder="Enter temperature... ">
+        <p id="output5"></p>
+        <button onclick="getTemperature()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div class="number_check_area">
+        <h2>"Check Name"</h2>
+        <input type="text" id="input7" placeholder="Enter name... ">
+        <p id="output6"></p>
+        <button onclick="getName()" class="button">Checked</button>
+    </div>
+    <hr/>
+
+
+    <script>
+        function getNumber() {
+            const inputElement = document.getElementById("input1");
+            const resultElement = document.getElementById("output1");
+            const value = inputElement.value;
+            const number = Number(value);
+            if (number > 0){
+                resultElement.textContent = "Number is positive.";
+            } 
+            else if (number < 0) {
+                resultElement.textContent = "Number is negative.";
+            }
+            else{
+                resultElement.textContent = "Zero number.";
+            }
+        }
+
+        function getVoter() {
+            const inputElement = document.getElementById("input2");
+            const resultElement = document.getElementById("output2");
+            const value = inputElement.value;
+            const number = Number(value);
+            if (number == ""){
+                resultElement.textContent = "Shoud provide age...";
+            }
+            else if (0 > number) {
+                resultElement.textContent = "Error age not in negative.";
+            }
+            else if (number >= 18){
+                resultElement.textContent = "You are eligible to vote cast.";
+            } 
+            else if (number < 18) {
+                resultElement.textContent = "You are not eligible to vote cast.";
+            }
+        }
+
+        function getPassword() {
+        const inputElement1 = document.getElementById("input3");
+        const inputElement2 = document.getElementById("input4");
+        const resultElement = document.getElementById("output3");
+
+        const value1 = inputElement1.value;
+        const value2 = inputElement2.value;
+
+            if (value1 === value2) {
+                resultElement.textContent = "Password matched.";
+            } else {
+                resultElement.textContent = "Password not matched.";
+            }
+        }
+
+        function getGrade() {
+            const inputElement = document.getElementById("input5");
+            const resultElement = document.getElementById("output4");
+            const value = inputElement.value;
+            const number = Number(value);
+            if (number >= 80 && number <= 100){
+                resultElement.textContent = "A Grade";
+            }
+            else if(number >= 70 ){
+                resultElement.textContent = "B Grade";
+            }
+            else if(number >= 60 ){
+                resultElement.textContent = "C Grade";
+            }
+            else if(number <= 50 ){
+                resultElement.textContent = "D Grade";
+            }
+            else{
+                resultElement.textContent = "Failed";
+            }
+        }
+
+        function getTemperature() {
+            const inputElement = document.getElementById("input6");
+            const resultElement = document.getElementById("output5");
+            const value = inputElement.value;
+            const number = Number(value);
+            if (number >= 35 ){
+                resultElement.textContent = "Too much hot weather";
+            }
+            else if(number >= 25 ){
+                resultElement.textContent = "Normal weather";
+            }
+            else{
+                resultElement.textContent = "Cool weather";
+            }
+        }
+
+        function getName() {
+            const inputElement = document.getElementById("input7");
+            const resultElement = document.getElementById("output6");
+            const value = inputElement.value.trim();
+
+            if (value.toLowerCase() === "ahmed" ) {
+                resultElement.textContent = `Welcome ${value}`;
+            } else {
+                resultElement.textContent = `${value} not matched`;
+            }
+        }
+    </script>
+</body>
+</html>

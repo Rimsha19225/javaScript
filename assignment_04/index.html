@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use If Else</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .body{
+            width: 100%;
+            height: auto;
+            background-color: black;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+            overflow-x: hidden;
+            color:bisque;
+        }
+        .number_check_area{
+            padding: 1.1rem 0rem;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        #input1, #input2, #input3{
+            width: 50%;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            color: darkblue;
+            margin-top: 15px;
+        }
+        .button{
+            padding: 0.9rem;
+            border: none;
+            border-radius: 0.8rem;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+        }
+        .button:hover{
+            background-color: #ed4444;
+        }
+        .roll{
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body class="body">
+    <h1>Name : Rimsha</h1>
+    <h2>Roll No: 00346</h2>
+    <h2 class="roll">Topic: if, else if, else</h2>
+    <hr/><hr/><hr/>
+    <div class="number_check_area">
+        <h2>"Age Group Identifier"</h2>
+        <input type="number" id="input1" placeholder="Enter number... ">
+        <p id="output1"></p>
+        <button onclick="getAge()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div class="number_check_area">
+        <h2>"Even or Odd Number"</h2>
+        <input type="number" id="input2" placeholder="Enter your age... ">
+        <p id="output2"></p>
+        <button onclick="even_odd_number()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div class="number_check_area">
+        <h2>"Positive, Negative, or Zero"</h2>
+        <input type="number" id="input3" placeholder="Enter number... ">
+        <p id="output3"></p>
+        <button onclick="getNumber()" class="button">Checked</button>
+    </div>
+    <hr/>
+
+    <script>
+        function getAge() {
+            const inputElement = document.getElementById("input1");
+            const outputElement = document.getElementById("output1");
+            const value = inputElement.value;
+            const number = Number(value);
+            if (number >= 60){
+                outputElement.textContent = "Senior Citizen";
+            } 
+            else if (number > 20) {
+                outputElement.textContent = "Adult";
+            }
+            else if (number > 13) {
+                outputElement.textContent = "Teenager"
+            }
+            else if (number > 0) {
+                outputElement.textContent = "Child";
+            }
+            else{
+                outputElement.textContent = "Invalid Input";
+            }
+        }
+
+        function even_odd_number() {
+            const inputElement = document.getElementById("input2");
+            const outputElement = document.getElementById("output2");
+            const value = inputElement.value;
+            const number = Number(value);
+            if (number % 2 == 0){
+                outputElement.textContent = "Even Number";
+            }
+            else{
+                outputElement.textContent = "Odd Number";
+            }
+        }
+
+        function getNumber() {
+            const inputElement = document.getElementById("input3");
+            const outputElement = document.getElementById("output3");
+            const value = inputElement.value;
+            const number = Number(value);
+            if (number > 0){
+                outputElement.textContent = "Number is positive.";
+            } 
+            else if (number < 0) {
+                outputElement.textContent = "Number is negative.";
+            }
+            else{
+                outputElement.textContent = "Zero number.";
+            }
+        }
+    </script>
+</body>
+</html>

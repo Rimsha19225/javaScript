@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .body{
+            width: 100%;
+            height: auto;
+            background-color: black;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+            overflow-x: hidden;
+            color:bisque;
+        }
+        .button{
+            padding: 0.5rem;
+            border: none;
+            border-radius: 0.8rem;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            width: 5%;
+            margin-bottom: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        .button:hover{
+            background-color: #ed4444;
+        }
+        .roll{
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body class="body">
+    <h1>Name : Rimsha</h1>
+    <h2>Roll No: 00346</h2>
+    <h2 class="roll">Topic: Variable</h2>
+    <hr/><hr/><hr/>
+    <div>
+        <h2>"Variable Declaration"</h2>
+        <p>Declear variable 👉 let username;</p>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Value Assign to Variable"</h2>
+        <p>Declear variable 👉 let myName;</p>
+        <p>Assign value 👉 myName = "Rimsha"</p>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Alert Variable"</h2>
+        <p>Declear variable 👉 let message;</p>
+        <p>Assign value 👉 message = "hello world"</p>
+        <p>Popup message 👉 alert(message)</p>
+        <button onclick="showMessage1()" class="button">Show</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Student Bio Data"</h2>
+        <p>Declear and assign value to variable 👉 let name = "Jhone Doe"</p>
+        <p>Declear and assign value to variable 👉 let age = 15</p>
+        <p>Declear and assign value to variable 👉 let detail = "Certified mobile application Development"</p>
+        <p>Popup message 👉 alert(`Student name is ${name}`)</p>
+        <p>Popup message 👉 alert(`${name} ${age} years old`)</p>
+        <p>Popup message 👉 alert(`${name} enroll in ${detail}`)</p>
+        <button onclick="showMessage2()" class="button">Show</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Line Break"</h2>
+        <p>Declear and assign value to variable 👉 let pizza = "PIZZA\nPIZZ\nPIZ\nPI\nP"</p>
+        <p>Popup message 👉 alert(pizza)</p>
+        <button onclick="showMessage3()" class="button">Show</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Email Address"</h2>
+        <p>Declear variable 👉 let email;</p>
+        <p>Assign value to variable 👉 email = "rimshaarshad374@gmail.com"</p>
+        <p>Popup message 👉 alert(`My email address is ${email}`)</p>
+        <button onclick="showMessage4()" class="button">Show</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Book View"</h2>
+        <p>Declear and assign value to variable 👉 const book = "A smarter way to learn JavaScript."</p>
+        <p>Popup message 👉 alert(`I am trying to learn from the book. ${book}`)</p>
+        <button onclick="showMessage5()" class="button">Show</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Write through JS"</h2>
+        <p>Declear and assign value to variable 👉 let message = "Yah! I can write HTML content through JS"</p>
+        <p>Browswe message 👉 document.getElementById("output").innerHTML = message</p>
+        <div id="output1"></div>
+        <button onclick="showMessage6()" class="button">Show</button>
+        <button onclick="hideMessage6()" class="button">Hide</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Show Browser & PopPup"</h2>
+        <p>Declear and assign value to variable 👉 let message = "“▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬”"</p>
+        <p>Popup message 👉 alert(message)</p>
+        <p>Browswe message 👉 document.getElementById("output").innerHTML = message;</p>
+        <div id="output2"></div>
+        <button onclick="showMessage7()" class="button">Show</button>
+        <button onclick="hideMessage7()" class="button">Hide</button>
+    </div>
+
+    <script>
+        let username;
+
+
+        let myName;
+        myName = "Rimsha"
+
+
+        function showMessage1(){
+            let message;
+            message = "hello world"
+            alert(message)
+        }
+
+
+        function showMessage2(){
+            let name = "Jhone Doe"
+            let age = 15
+            let detail = "Certified mobile application Development"
+            alert(`Student name is ${name}`)
+            alert(`${name} ${age} years old`)
+            alert(`${name} enroll in ${detail}`)
+        }
+
+
+        function showMessage3(){
+            let pizza = "PIZZA\nPIZZ\nPIZ\nPI\nP"
+            alert(pizza)
+        }
+
+
+        function showMessage4(){
+            let email;
+            email = "rimshaarshad374@gmail.com"
+            message = "My email address is " + email
+            alert(`My email address is ${email}`)
+        }
+
+
+        function showMessage5(){
+            const book = "A smarter way to learn JavaScript."
+            alert(`I am trying to learn from the book. ${book}`)
+        }
+
+
+        function showMessage6(){
+            let message = "Yah! I can write HTML content through JS";
+            document.getElementById("output1").innerHTML = message;
+        }
+
+
+        function hideMessage6() {
+            document.getElementById("output1").innerHTML = "";
+        }
+
+
+        function hideMessage7(){
+            document.getElementById("output2").innerHTML = ""
+        }
+
+
+        function showMessage7(){
+            let message = "“▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬”"
+            alert(message)
+            document.getElementById("output2").innerHTML = message;
+        }
+    </script> 
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .body{
+            width: 100%;
+            height: auto;
+            background-color: black;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+            overflow-x: hidden;
+            color:bisque;
+        }
+        .button{
+            padding: 0.5rem;
+            border: none;
+            border-radius: 0.8rem;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            width: 5%;
+            margin-bottom: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        .button:hover{
+            background-color: #ed4444;
+        }
+        .roll{
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body class="body">
+    <h1>Name : Rimsha</h1>
+    <h2>Roll No: 00346</h2>
+    <h2 class="roll">Topic: Alert</h2>
+    <hr/><hr/><hr/>
+    <div>
+        <h2>"Variable Declaration"</h2>
+        <p>Declear variable and get value from user 👉 const name = prompt("What's your name?");</p>
+        <p>Popup message 👉 alert(`Welcome to our website, ${name} ! Have a great day!`);</p>
+        <p>Popup message 👉 alert("Welcome to our website! Have a great day!");</p>
+        <button onclick="showMessage1()" class="button">Show</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Password"</h2>
+        <p>Popup message 👉 alert("Error! Please enter a valid password.");</p>
+        <button onclick="showMessage2()" class="button">Show</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Line Break"</h2>
+        <p>Popup message 👉 alert("Wellcome to JS Land....\nHappy Coding!");</p>
+        <button onclick="showMessage3()" class="button">Show</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Sequence Message Alert"</h2>
+        <p>Popup message 👉 alert("Wellcome to JS Land...");</p>
+        <p>Popup message 👉 alert("Happy Coding!");</p>
+        <button onclick="showMessage4()" class="button">Show</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"console Message"</h2>
+        <p>Console message 👉 console.log("Hello... I can run JS through my web browser's console")</p>
+        <button onclick="showMessage5()" class="button">Show</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"HTML & CSS Project"</h2>
+        <p>Popup message 👉 alert("Welcome to My HTML & CSS Project!");</p>
+        <button onclick="showMessage6()" class="button">Show</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Practice Placement"</h2>
+        <p>Head</p>
+        <p>Body (before your page’s HTML)</p>
+        <p>Body (inside your page’s HTML)</p>
+        <p>Body (after your page’s HTML)</p>
+    </div>
+
+    <script>
+        function showMessage1(){
+            const name = prompt("What's your name?");
+            alert(`Welcome to our website, ${name} ! Have a great day!`);
+            alert("Welcome to our website! Have a great day!");
+        }
+
+        function showMessage2(){
+            alert("Error! Please enter a valid password.");
+        }
+
+        function showMessage3(){
+            alert("Wellcome to JS Land....\nHappy Coding!");
+        }
+
+        function showMessage4(){
+            alert("Wellcome to JS Land...")
+            alert("Happy Coding!")
+        }
+
+        function showMessage5(){
+            console.log("Hello... I can run JS through my web browser's console")
+        }
+
+        function showMessage6(){
+            alert("Welcome to My HTML & CSS Project!");
+        }
+    </script>
+</body>
+</html>
