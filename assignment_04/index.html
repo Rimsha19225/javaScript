@@ -22,7 +22,7 @@
             padding: 1.1rem 0rem;
             font-family:Arial, Helvetica, sans-serif;
         }
-        #input1, #input2, #input3{
+        #input1, #input2, #input3, #input4, #input5, #input6, #input7, #input8, #input9, #input10, #input11, #input12, #input13, #input14{
             width: 50%;
             padding: 1rem;
             border-radius: 0.5rem;
@@ -76,6 +76,58 @@
         <button onclick="getNumber()" class="button">Checked</button>
     </div>
     <hr/>
+    <div class="number_check_area">
+        <h2>"Vowel or Consonant Checker"</h2>
+        <input type="text" id="input4" placeholder="Write single alphabet letter... ">
+        <p id="output4"></p>
+        <button onclick="getAlphabet()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div class="number_check_area">
+        <h2>"Simple Calculator"</h2>
+        <input type="number" id="input5" placeholder="Enter first number... ">
+        <input type="number" id="input6" placeholder="Enter second number... ">
+        <input type="text" id="input14" placeholder="Enter operator (+  -  *  /  **  %)... ">
+        <p id="output5"></p>
+        <button onclick="getCalculator()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div class="number_check_area">
+        <h2>"Leap Year Checker"</h2>
+        <input type="number" id="input7" placeholder="Write year... ">
+        <p id="output6"></p>
+        <button onclick="getLeapYear()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div class="number_check_area">
+        <h2>"Temperature Checker"</h2>
+        <input type="number" id="input8" placeholder="Enter temperature... ">
+        <p id="output7"></p>
+        <button onclick="getTemperature()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div class="number_check_area">
+        <h2>"Grade Calculator"</h2>
+        <input type="number" id="input9" placeholder="Enter marks... ">
+        <p id="output8"></p>
+        <button onclick="getGrade()" class="button">Checked</button>
+    </div>
+    <hr/>
+        <div class="number_check_area">
+        <h2>"Largest of Three Numbers"</h2>
+        <input type="number" id="input10" placeholder="Enter first number... ">
+        <input type="number" id="input11" placeholder="Enter second number... ">
+        <input type="number" id="input12" placeholder="Enter third number... ">
+        <p id="output9"></p>
+        <button onclick="getLargeNumber()" class="button">Checked</button>
+    </div>
+    <hr/>
+        <div class="number_check_area">
+        <h2>"Login System"</h2>
+        <input type="number" id="input13" placeholder="Enter password... ">
+        <p id="output10"></p>
+        <button onclick="getLogin()" class="button">Checked</button>
+    </div>
 
     <script>
         function getAge() {
@@ -84,16 +136,16 @@
             const value = inputElement.value;
             const number = Number(value);
             if (number >= 60){
-                outputElement.textContent = "Senior Citizen";
+                outputElement.textContent = `${number} years old person is Senior Citizen`;
             } 
             else if (number > 20) {
-                outputElement.textContent = "Adult";
+                outputElement.textContent = `${number} years old person is Adult`;
             }
             else if (number > 13) {
-                outputElement.textContent = "Teenager"
+                outputElement.textContent = `${number} years old person is Teenager`;
             }
             else if (number > 0) {
-                outputElement.textContent = "Child";
+                outputElement.textContent = `${number} years old person is Child`;
             }
             else{
                 outputElement.textContent = "Invalid Input";
@@ -106,10 +158,10 @@
             const value = inputElement.value;
             const number = Number(value);
             if (number % 2 == 0){
-                outputElement.textContent = "Even Number";
+                outputElement.textContent = `${number} is Even Number`;
             }
             else{
-                outputElement.textContent = "Odd Number";
+                outputElement.textContent = `${number} is Odd Number`;
             }
         }
 
@@ -119,13 +171,168 @@
             const value = inputElement.value;
             const number = Number(value);
             if (number > 0){
-                outputElement.textContent = "Number is positive.";
+                outputElement.textContent = `${number} is positive`;
             } 
             else if (number < 0) {
-                outputElement.textContent = "Number is negative.";
+                outputElement.textContent = `${number} is negative`;
             }
             else{
                 outputElement.textContent = "Zero number.";
+            }
+        }
+
+        function getAlphabet() {
+            const inputElement = document.getElementById("input4");
+            const outputElement = document.getElementById("output4");
+            const value = inputElement.value;
+            const number = Number(value);
+
+            if (value.length !== 1 || !/[a-z]/.test(value)) {
+                outputElement.textContent = "Please enter a single alphabet letter.";
+                return;
+            }
+
+            const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+            if (vowels.includes(value)){
+                outputElement.textContent = "It's a vowel";
+            }
+            else{
+                outputElement.textContent = "It's a consonant";
+            }
+        }
+
+        function getCalculator() {
+            const inputElement1 = document.getElementById("input5");
+            const inputElement2 = document.getElementById("input6");
+            const inputOperator = document.getElementById("input14");
+            const outputElement = document.getElementById("output5");
+            const value1 = inputElement1.value;
+            const value2 = inputElement2.value;
+            const operator = inputOperator.value;
+            const number1 = Number(value1);
+            const number2 = Number(value2);
+            if (operator === "+"){
+                outputElement.textContent = `Addition: ${number1 + number2}`;
+            } 
+            else if (operator === "-") {
+                outputElement.textContent = `Subtraction: ${number1 - number2}`;
+            }
+            else if (operator === "*") {
+                outputElement.textContent = `Multiply: ${number1 * number2}`;
+            }
+            else if (operator === "/") {
+                outputElement.textContent = `Division: ${number1 / number2}`;
+            }
+            else if (operator === "**") {
+                outputElement.textContent = `Square: ${number1 ** number2}`;
+            }
+            else if (operator === "%") {
+                outputElement.textContent = `Reminder: ${number1 % number2}`;
+            }
+            else{
+                outputElement.textContent = "Invalid Operation";
+            }
+        }
+
+        function getLeapYear() {
+            const inputElement = document.getElementById("input7");
+            const outputElement = document.getElementById("output6");
+            const value = inputElement.value;
+            const number = Number(value);
+            if (number % 4 === 0 && number % 100 !== 0){
+                outputElement.textContent = "Leap year";
+            } 
+            else if (number % 400 === 0) {
+                outputElement.textContent = "Leap year";
+            }
+            else{
+                outputElement.textContent = "No Leap year";
+            }
+        }
+
+        function getTemperature() {
+            const inputElement = document.getElementById("input8");
+            const outputElement = document.getElementById("output7");
+            const value = inputElement.value;
+            const number = Number(value);
+            if (number > 30){
+                outputElement.textContent = `${number}° Temperature. It's Hot..!`;
+            } 
+            else if (number > 20) {
+                outputElement.textContent = `${number}° Temperature. It's Warm..!`;
+            }
+            else if (number > 10) {
+                outputElement.textContent = `${number}° Temperature. It's Cool..!`;
+            }
+            else{
+                outputElement.textContent = `${number}° Temperature. It's Cold..!`;
+            }
+        }
+
+        function getGrade() {
+            const inputElement = document.getElementById("input9");
+            const outputElement = document.getElementById("output8");
+            const value = inputElement.value;
+            const number = Number(value);
+            if (number >= 90 && number <= 100){
+                outputElement.textContent = `Your marks is ${number}, A Grade`;
+            } 
+            else if (number >= 80) {
+                outputElement.textContent = `Your marks is ${number}, B Grade`;
+            }
+            else if (number >= 70) {
+                outputElement.textContent = `Your marks is ${number}, C Grade`;
+            }
+            else if (number >= 60) {
+                outputElement.textContent = `Your marks is ${number}, D Grade`;
+            }
+            else if (number >= 50) {
+                outputElement.textContent = `Your marks is ${number}, E Grade`;
+            }
+            else{
+                outputElement.textContent = `Your marks is ${number}, Failed`;
+            }
+        }
+
+        function getLargeNumber() {
+            const inputElement1 = document.getElementById("input10");
+            const inputElement2 = document.getElementById("input11");
+            const inputElement3 = document.getElementById("input12");
+            const outputElement = document.getElementById("output9");
+            const value1 = inputElement1.value;
+            const value2 = inputElement2.value;
+            const value3 = inputElement3.value;
+            const number1 = Number(value1);
+            const number2 = Number(value2);
+            const number3 = Number(value3);
+            if (number1 > number2 && number1 > number3){
+                outputElement.textContent = `${number1} is largest in (${number1}, ${number2}, ${number3})`;
+            } 
+            else if (number2 > number1 && number2 > number3) {
+                outputElement.textContent = `${number2} is largest in (${number1}, ${number2}, ${number3})`;
+            }
+            else if (number3 > number1 && number3 > number1) {
+                outputElement.textContent = `${number3} is largest in (${number1}, ${number2}, ${number3})`;
+            }
+            else if (number2 === number1 && number2 === number3) {
+                outputElement.textContent = `All numbers are equal`;
+            }
+            else{
+                outputElement.textContent = "Zero number.";
+            }
+        }
+
+        function getLogin() {
+            const inputElement = document.getElementById("input13");
+            const outputElement = document.getElementById("output10");
+            const value = inputElement.value;
+            const number = Number(value);
+            if (number === 12345){
+                outputElement.textContent = "Login Successful";
+            }
+            else{
+                outputElement.textContent = "Incorrect Credentials";
             }
         }
     </script>
