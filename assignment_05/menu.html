@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturent</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: auto;
+            background-color: black;
+            text-align: center;
+            margin: 0;
+            overflow-x: hidden;
+            color:bisque;
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+        }
+        .box_contaner{
+            max-width: 70%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 10px;
+        }
+        .contaner{
+            border: bisque;
+            border-radius: 15px;
+            background-color: #262323;
+            height: 55vh;
+            color: bisque;
+        }
+        .contaner:hover{
+            transform: scale(1.02);
+        }
+        .image_sec{
+            width: 100%;
+            height: 25vh;
+        }
+        .image_sec img{
+            width: 100%;
+            height: 25vh;
+            border-radius: 15px;
+        }
+        .detail{
+            padding: 15px 10px;
+            text-align: left;
+        }
+        .title{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .para{
+            font-size: 17px;
+        }
+        button{
+            padding: 0.9rem;
+            border: none;
+            border-radius: 0.8rem;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+        }
+        button:hover{
+            background-color: #ed4444;
+        }
+        @media screen and (max-width: 768px) {
+            h1{
+                font-size: 30px;
+            }
+            .box_contaner{
+                max-width: 95%;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            .contaner{
+                border-radius: 10px;
+                height: 45vh;
+            }
+            .detail{
+                padding: 8px 8px;
+            }
+            .title{
+                font-size: 15px;
+            }
+            .para{
+                font-size: 11px;
+            }
+            button{
+                padding: 0.4rem;
+                border-radius: 0.3rem;
+            }
+            .image_sec{
+                height: 16vh;
+                place-items: left;
+            }
+            .image_sec img{
+                height: 16vh;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Restaurant Menu</h1>
+    <div class="box_contaner">
+        <div class="contaner">
+            <div class="image_sec">
+                <img src="./assests/starters.jpg" alt="starters">
+            </div>
+            <div class="detail">
+                <div class="title">Starters</div>
+                <p class="para">Our starters are the perfect beginning to your meal. Crispy fries, garlic bread, nuggets, and cheesy bites will awaken your taste buds with every bite.</p>
+                <button onclick="starters()">See Detail</button>
+            </div>
+        </div>
+        <div class="contaner">
+            <div class="image_sec">
+                <img src="./assests/main curse.jpg" alt="main Course">
+            </div>
+            <div class="detail">
+                <div class="title">Main Course</div>
+                <p class="para">The main course brings hearty satisfaction. Enjoy juicy burgers, creamy pasta, grilled chicken, and flavorful rice dishes prepared freshed and deliciousness.</p>
+                <button onclick="main_course()">See Detail</button>
+            </div>
+        </div>
+        <div class="contaner">
+            <div class="image_sec">
+                <img src="./assests/pizza.jpg" alt="pizza">
+            </div>
+            <div class="detail">
+                <div class="title">Pizzas</div>
+                <p class="para">Our pizzas are loaded with flavor. From classic Margherita to spicy Chicken Tikka, each slice offers gooey cheese, fresh toppings, and a perfectly crispy base.</p>
+                <button onclick="pizza()">See Detail</button>
+            </div>
+        </div>
+        <div class="contaner">
+            <div class="image_sec">
+                <img src="./assests/drinks.jpg" alt="drinks">
+            </div>
+            <div class="detail">
+                <div class="title">Drinks</div>
+                <p class="para">Quench your thirst with refreshing drinks. Choose from soft drinks, cold coffee, fresh lime, or our special mint margarita for the ultimate cool-down experience.</p>
+                <button onclick="drinks()">See Detail</button>
+            </div>
+        </div>
+        <div class="contaner">
+            <div class="image_sec">
+                <img src="./assests/desserts.jpg" alt="desserts">
+            </div>
+            <div class="detail">
+                <div class="title">Desserts</div>
+                <p class="para">End your meal with our sweet treats. Indulge in brownies, molten lava cake, ice cream, or cheesecake, guaranteed to satisfy every sweet craving happily.</p>
+                <button onclick="desserts()">See Detail</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function starters(){
+            window.location.href = './starters.html';
+        }
+
+        function main_course(){
+            window.location.href = './main_course.html';
+        }
+
+        function pizza(){
+            window.location.href = './pizza.html';
+        }
+
+        function drinks(){
+            window.location.href = './drinks.html';
+        }
+
+        function desserts(){
+            window.location.href = './desserts.html';
+        }
+    </script>
+</body>
+</html>

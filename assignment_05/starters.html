@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturent</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: auto;
+            background-color: black;
+            text-align: center;
+            margin: 0;
+            overflow-x: hidden;
+            color:bisque;
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+        }
+        .container{
+            width: 60%;
+            margin: 0 auto;
+            padding: 0px;
+        }
+        .line_title{
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0px;
+            font-size: 30px;
+            color: red;
+            font-weight: bold;
+        }
+        .line{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0px;
+            font-size: 25px;
+        }
+        .input_sec{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            gap: 15px;
+        }
+        #input1, #input2{
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+        .button{
+            padding: 0.8rem;
+            border: none;
+            border-radius: 0.8rem;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+        }
+        .button:hover{
+            background-color: #ed4444;
+        }
+        .button-group{
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            padding-bottom: 20px;
+            justify-content: center;
+        }
+        #output1{
+            text-align: center;
+            font-size: 22px;
+            padding: 0px 10px 10px 10px;
+        }
+        @media screen and (max-width: 768px) {
+            h1{
+                font-size: 30px;
+            }
+            .container{
+                width: 95%;
+                margin: 0 auto;
+                padding: 5px;
+            }
+            .line_title{
+                padding: 10px 0px;
+                font-size: 20px;
+            }
+            .line{
+                padding: 8px 0px;
+                font-size: 15px;
+            }
+            .input_sec{
+                flex-direction:column;
+                gap: 5px;
+            }
+            #input1, #input2{
+                width: 70%;
+                padding: 0.5rem;
+                border-radius: 0.4rem;
+                margin-bottom: 0rem;
+            }
+            .button{
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+            }
+            #output1{
+                font-size: 13px;
+                padding-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Starters Menu</h1>
+    <div class="container">
+        <hr><hr>
+        <div class="line_title">
+            <div>Categories</div>
+            <div>Price</div>
+        </div>
+        <div class="line">
+            <div>1. Crispy Fries</div>
+            <div>Rs 250</div>
+        </div>
+        <div class="line">
+            <div>2. Garlic Bread</div>
+            <div>Rs 300</div>
+        </div>
+        <div class="line">
+            <div>3. Chicken Nuggets</div>
+            <div>Rs 450</div>
+        </div>
+        <div class="line">
+            <div>4. Mozzarella Sticks</div>
+            <div>Rs 480</div>
+        </div>
+        <div class="line">
+            <div>5. Loaded Nachos</div>
+            <div>Rs 550</div>
+        </div>
+        <div class="line">
+            <div>6. Peri Peri Wings</div>
+            <div>Rs 600</div>
+        </div>
+        <div class="line">
+            <div>7. Cheesy Potato Bites</div>
+            <div>Rs 400</div>
+        </div>
+    </div>
+    <div>
+        <div class="input_sec">
+            <div>
+                <input type="number" id="input1" placeholder="Enter Category number... ">
+                <p id="output"></p>
+            </div>
+            <div>
+                <input type="number" id="input2" placeholder="Enter Quantity... ">
+                <p id="output"></p>
+            </div>
+        </div>
+        <div id="output1"></div>
+        <div class="button-group">
+            <button onclick="getBack()" class="button">Back Menu</button>
+            <button onclick="getOrder()" class="button">Place Order</button>
+        </div>
+    </div>
+    <script>
+        function getBack(){
+            window.location.href = "./menu.html"
+        }
+
+        function getOrder(){
+            const inputElement1 = document.getElementById("input1")
+            const inputElement2 = document.getElementById("input2")
+            const value1 = inputElement1.value
+            const value2 = inputElement2.value
+            const number1 = Number(value1);
+            const number2 = Number(value2);
+            const Crispy_Fries = 250
+            const Garlic_Bread = 300
+            const Chicken_Nuggets = 450
+            const Mozzarella_Sticks = 480
+            const Loaded_Nachos = 550
+            const Peri_Peri_Wings = 600
+            const Cheesy_Potato_Bites = 400
+
+            if (number1 == 1){
+                order = number2 * Crispy_Fries
+                const message =`🍽️ You ordered ${number2} Crispy Fries. Your total price is Rs ${order}. <br> Thank you for your order!`
+                document.getElementById("output1").innerHTML = message;
+            }
+            else if (number1 == 2){
+                order = number2 * Garlic_Bread
+                const message =`🍽️ You ordered ${number2} Garlic Bread. Your total price is Rs ${order}. <br> Thank you for your order!`
+                document.getElementById("output1").innerHTML = message;
+            }
+            else if (number1 == 3){
+                order = number2 * Chicken_Nuggets
+                const message =`🍽️ You ordered ${number2} Chicken Nuggets. Your total price is Rs ${order}. <br> Thank you for your order!`
+                document.getElementById("output1").innerHTML = message;
+            }
+            else if (number1 == 4){
+                order = number2 * Mozzarella_Sticks
+                const message =`🍽️ You ordered ${number2} Mozzarella Sticks. Your total price is Rs ${order}. <br> Thank you for your order!`
+                document.getElementById("output1").innerHTML = message;
+            }
+            else if (number1 == 5){
+                order = number2 * Loaded_Nachos
+                const message =`🍽️ You ordered ${number2} Loaded Nachos. Your total price is Rs ${order}. <br> Thank you for your order!`
+                document.getElementById("output1").innerHTML = message;
+            }
+            else if (number1 == 6){
+                order = number2 * Peri_Peri_Wings
+                const message =`🍽️ You ordered ${number2} Peri Peri Wings. Your total price is Rs ${order}. <br> Thank you for your order!`
+                document.getElementById("output1").innerHTML = message;
+            }
+            else if (number1 == 7){
+                order = number2 * Cheesy_Potato_Bites
+                const message =`🍽️ You ordered ${number2} Cheesy Potato Bites. Your total price is Rs ${order}. <br> Thank you for your order!`
+                document.getElementById("output1").innerHTML = message;
+            }
+            else{
+            }
+        }
+    </script>
+</body>
+</html>
