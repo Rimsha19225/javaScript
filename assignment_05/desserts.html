@@ -186,43 +186,46 @@
             const Waffle_with_Ice_Cream = 550
             const Chocolate_Mousse = 500
             const Fruit_Trifle = 450
-
-            if (number1 == 1){
-                order = number2 * Chocolate_Brownie
-                const message =`🍰 You ordered ${number2} Chocolate Brownie + IceCream. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 2){
-                order = number2 * Molten_Lava_Cake
-                const message =`🍰 You ordered ${number2} Molten Lava Cake. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 3){
-                order = number2 * Ice_Cream_Scoop
-                const message =`🍰 You ordered ${number2} Ice Cream Scoop. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 4){
-                order = number2 * Cheesecake
-                const message =`🍰 You ordered ${number2} Cheesecake. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 5){
-                order = number2 * Waffle_with_Ice_Cream
-                const message =`🍰 You ordered ${number2} Waffle with Ice Cream. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 6){
-                order = number2 * Chocolate_Mousse
-                const message =`🍰 You ordered ${number2} Chocolate Mousse. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 7){
-                order = number2 * Fruit_Trifle
-                const message =`🍰 You ordered ${number2} Fruit Trifle. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
+            if (number1 >= 1 && number1 <= 7){
+                if (number1 == 1){
+                    order = number2 * Chocolate_Brownie
+                    const message =`🍰 You ordered ${number2} Chocolate Brownie + IceCream. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 2){
+                    order = number2 * Molten_Lava_Cake
+                    const message =`🍰 You ordered ${number2} Molten Lava Cake. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 3){
+                    order = number2 * Ice_Cream_Scoop
+                    const message =`🍰 You ordered ${number2} Ice Cream Scoop. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 4){
+                    order = number2 * Cheesecake
+                    const message =`🍰 You ordered ${number2} Cheesecake. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 5){
+                    order = number2 * Waffle_with_Ice_Cream
+                    const message =`🍰 You ordered ${number2} Waffle with Ice Cream. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 6){
+                    order = number2 * Chocolate_Mousse
+                    const message =`🍰 You ordered ${number2} Chocolate Mousse. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 7){
+                    order = number2 * Fruit_Trifle
+                    const message =`🍰 You ordered ${number2} Fruit Trifle. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
             }
             else{
+                const message =`Invalid Category Number.`
+                document.getElementById("output1").innerHTML = message;
             }
         }
     </script>

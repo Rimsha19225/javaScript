@@ -187,42 +187,47 @@
             const Grilled_Chicken_with_Rice = 980
             const Chicken_Steak_with_Fries = 1050
 
-            if (number1 == 1){
-                order = number2 * Grilled_Chicken_Burger
-                const message =`🍗 You ordered ${number2} Grilled Chicken Burger. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 2){
-                order = number2 * Zinger_Burger
-                const message =`🍗 You ordered ${number2} Zinger Burger. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 3){
-                order = number2 * Classic_Beef_Burger
-                const message =`🍗 You ordered ${number2} Classic Beef Burger. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 4){
-                order = number2 * Chicken_Alfredo_Pasta
-                const message =`🍗 You ordered ${number2} Chicken Alfredo Pasta. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 5){
-                order = number2 * Spicy_Arrabbiata_Pasta
-                const message =`🍗 You ordered ${number2} Spicy Arrabbiata Pasta. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 6){
-                order = number2 * Grilled_Chicken_with_Rice
-                const message =`🍗 You ordered ${number2} Grilled Chicken with Rice. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 7){
-                order = number2 * Chicken_Steak_with_Fries
-                const message =`🍗 You ordered ${number2} Chicken Steak with Fries. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
+            if (number1 >= 1 && number1 <= 7){
+                if (number1 == 1){
+                    order = number2 * Grilled_Chicken_Burger
+                    const message =`🍗 You ordered ${number2} Grilled Chicken Burger. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 2){
+                    order = number2 * Zinger_Burger
+                    const message =`🍗 You ordered ${number2} Zinger Burger. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 3){
+                    order = number2 * Classic_Beef_Burger
+                    const message =`🍗 You ordered ${number2} Classic Beef Burger. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 4){
+                    order = number2 * Chicken_Alfredo_Pasta
+                    const message =`🍗 You ordered ${number2} Chicken Alfredo Pasta. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 5){
+                    order = number2 * Spicy_Arrabbiata_Pasta
+                    const message =`🍗 You ordered ${number2} Spicy Arrabbiata Pasta. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 6){
+                    order = number2 * Grilled_Chicken_with_Rice
+                    const message =`🍗 You ordered ${number2} Grilled Chicken with Rice. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 7){
+                    order = number2 * Chicken_Steak_with_Fries
+                    const message =`🍗 You ordered ${number2} Chicken Steak with Fries. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+            
             }
             else{
+                const message =`Invalid Category Number.`
+                document.getElementById("output1").innerHTML = message;
             }
         }
     </script>

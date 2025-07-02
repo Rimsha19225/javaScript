@@ -186,43 +186,46 @@
             const Fresh_Juices = 300
             const Strawberry_Smoothie = 400
             const Oreo_Shake = 450
-
-            if (number1 == 1){
-                order = number2 * Fresh_Lime
-                const message =`🥂 You ordered ${number2} Fresh Lime. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 2){
-                order = number2 * Cold_Coffee
-                const message =`🥂 You ordered ${number2} Cold Coffee. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 3){
-                order = number2 * Soft_Drinks
-                const message =`🥂 You ordered ${number2} Soft Drinks (Coke, Sprite). Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 4){
-                order = number2 * Mint_Margarita
-                const message =`🥂 You ordered ${number2} Mint Margarita. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 5){
-                order = number2 * Fresh_Juices
-                const message =`🥂 You ordered ${number2} Fresh Juices. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 6){
-                order = number2 * Strawberry_Smoothie
-                const message =`🥂 You ordered ${number2} Strawberry Smoothie. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 7){
-                order = number2 * Oreo_Shake
-                const message =`🥂 You ordered ${number2} Oreo Shake. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
+            if (number1 >= 1 && number1 <= 7){
+                if (number1 == 1){
+                    order = number2 * Fresh_Lime
+                    const message =`🥂 You ordered ${number2} Fresh Lime. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 2){
+                    order = number2 * Cold_Coffee
+                    const message =`🥂 You ordered ${number2} Cold Coffee. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 3){
+                    order = number2 * Soft_Drinks
+                    const message =`🥂 You ordered ${number2} Soft Drinks (Coke, Sprite). Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 4){
+                    order = number2 * Mint_Margarita
+                    const message =`🥂 You ordered ${number2} Mint Margarita. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 5){
+                    order = number2 * Fresh_Juices
+                    const message =`🥂 You ordered ${number2} Fresh Juices. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 6){
+                    order = number2 * Strawberry_Smoothie
+                    const message =`🥂 You ordered ${number2} Strawberry Smoothie. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 7){
+                    order = number2 * Oreo_Shake
+                    const message =`🥂 You ordered ${number2} Oreo Shake. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
             }
             else{
+                const message =`Invalid Category Number.`
+                document.getElementById("output1").innerHTML = message;
             }
         }
     </script>

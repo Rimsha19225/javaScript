@@ -186,43 +186,46 @@
             const Spicy_Chicken_Tikka_Pizza = 1250
             const Four_Cheese_Pizza = 1350
             const Chicken_Fajita_Pizza = 1300
-
-            if (number1 == 1){
-                order = number2 * Margherita_Pizza
-                const message =`🍕 You ordered ${number2} Margherita Pizza. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 2){
-                order = number2 * Pepperoni_Pizza
-                const message =`🍕 You ordered ${number2} Pepperoni Pizza. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 3){
-                order = number2 * BBQ_Chicken_Pizza
-                const message =`🍕 You ordered ${number2} Chicken Pizza. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 4){
-                order = number2 * Veggie_Supreme_Pizza
-                const message =`🍕 You ordered ${number2} Veggie Supreme Pizza. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 5){
-                order = number2 * Spicy_Chicken_Tikka_Pizza
-                const message =`🍕 You ordered ${number2} Spicy Chicken Tikka Pizza. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 6){
-                order = number2 * Four_Cheese_Pizza
-                const message =`🍕 You ordered ${number2} Four Cheese Pizza. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
-            }
-            else if (number1 == 7){
-                order = number2 * Chicken_Fajita_Pizza
-                const message =`🍕 You ordered ${number2} Chicken Fajita Pizza. Your total price is Rs ${order}. <br> Thank you for your order!`
-                document.getElementById("output1").innerHTML = message;
+            if (number1 >= 1 && number1 <= 7){
+                if (number1 == 1){
+                    order = number2 * Margherita_Pizza
+                    const message =`🍕 You ordered ${number2} Margherita Pizza. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 2){
+                    order = number2 * Pepperoni_Pizza
+                    const message =`🍕 You ordered ${number2} Pepperoni Pizza. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 3){
+                    order = number2 * BBQ_Chicken_Pizza
+                    const message =`🍕 You ordered ${number2} Chicken Pizza. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 4){
+                    order = number2 * Veggie_Supreme_Pizza
+                    const message =`🍕 You ordered ${number2} Veggie Supreme Pizza. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 5){
+                    order = number2 * Spicy_Chicken_Tikka_Pizza
+                    const message =`🍕 You ordered ${number2} Spicy Chicken Tikka Pizza. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 6){
+                    order = number2 * Four_Cheese_Pizza
+                    const message =`🍕 You ordered ${number2} Four Cheese Pizza. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
+                else if (number1 == 7){
+                    order = number2 * Chicken_Fajita_Pizza
+                    const message =`🍕 You ordered ${number2} Chicken Fajita Pizza. Your total price is Rs ${order}. <br> Thank you for your order!`
+                    document.getElementById("output1").innerHTML = message;
+                }
             }
             else{
+                const message =`Invalid Category Number.`
+                document.getElementById("output1").innerHTML = message;
             }
         }
     </script>
