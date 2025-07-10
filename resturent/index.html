@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturent</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .body{
+            width: 100%;
+            height: auto;
+            background-color: black;
+            text-align: center;
+            margin: 0;
+            padding: 10px 0;
+            overflow-x: hidden;
+            color:bisque;
+        }
+        .number_check_area{
+            padding: 1.1rem 0rem;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .button{
+            padding: 0.9rem;
+            border: none;
+            border-radius: 0.8rem;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+        }
+        .button:hover{
+            background-color: #ed4444;
+        }
+        .roll{
+            margin-bottom: 1.5rem;
+        }
+        .title{
+            font-size: 50px;
+        }
+        .sub_title{
+            font-size: 25px;
+        }
+        h1{
+            font-size: 30px;
+        }
+        @media screen and (max-width: 768px) {
+            .title {
+                font-size: 32px;
+            }
+
+            .sub_title {
+                font-size: 18px;
+            }
+
+            .button {
+                width: 50%;
+                padding: 0.8rem;
+                font-size: 16px;
+            }
+
+            .number_check_area {
+                padding: 1rem;
+            }
+
+            h1{
+                font-size: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body class="body">
+    <h1>Name : Rimsha</h1>
+    <h1>Roll No: 00346</h1>
+    <h1 class="roll">Topic: Resturent</h1>
+    <hr/><hr/><hr/>
+    <div class="number_check_area">
+        <h2 class="title">Flavor Street</h2>
+        <h3 class="sub_title">Where Every Bite Tells a Story!</h3>
+        <button onclick="getFood()" class="button">Open Door</button>
+    </div>
+    <script>
+        function getFood(){
+            window.location.href = './resturent.html';
+        }
+    </script>
+</body>
+</html>

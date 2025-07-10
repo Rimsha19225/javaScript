@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resturent</title>
+    <title>USER INPUT & CONDITIONAL</title>
     <style>
         * {
             box-sizing: border-box;
@@ -14,13 +14,9 @@
             background-color: black;
             text-align: center;
             margin: 0;
-            padding: 10px 0;
+            padding: 20px 0;
             overflow-x: hidden;
             color:bisque;
-        }
-        .number_check_area{
-            padding: 1.1rem 0rem;
-            font-family:Arial, Helvetica, sans-serif;
         }
         .button{
             padding: 0.9rem;
@@ -33,58 +29,417 @@
         .button:hover{
             background-color: #ed4444;
         }
+        #input1, #input2, #input3, #input4, #input5, #input6, #input7, #input8, #input9, #input10, #input11, #input12, #input13, #input14{
+            width: 50%;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            color: darkblue;
+            margin-top: 15px;
+        }
         .roll{
             margin-bottom: 1.5rem;
         }
-        .title{
-            font-size: 50px;
+        #output5 {
+            width: 20%;
+            margin: auto;
+            border: black;
+            border-radius: 1.5rem;
+            border: double;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            text-align: left;
+            padding: 1rem;
+            background-color: bisque;
+            color: black;
+            border-radius: 10px;
         }
-        .sub_title{
-            font-size: 25px;
-        }
-        h1{
-            font-size: 30px;
-        }
-        @media screen and (max-width: 768px) {
-            .title {
-                font-size: 32px;
+        @media (max-width: 768px){
+            #input1, #input2, #input3, #input4, #input5, #input6, #input7, #input8, #input9, #input10, #input11, #input12, #input13, #input14{
+                width: 90%;
+                padding: 0.7rem;
             }
-
-            .sub_title {
-                font-size: 18px;
-            }
-
-            .button {
-                width: 50%;
+            #output5 {
+                width: 60%;
                 padding: 0.8rem;
-                font-size: 16px;
             }
-
-            .number_check_area {
-                padding: 1rem;
+            .button{
+                padding: 0.7rem;
             }
-
-            h1{
+            .roll{
                 font-size: 20px;
             }
         }
-
     </style>
 </head>
 <body class="body">
     <h1>Name : Rimsha</h1>
-    <h1>Roll No: 00346</h1>
-    <h1 class="roll">Topic: Resturent</h1>
+    <h2>Roll No: 00346</h2>
+    <h2 class="roll">Topic: USER INPUT & CONDITIONAL</h2>
     <hr/><hr/><hr/>
-    <div class="number_check_area">
-        <h2 class="title">Flavor Street</h2>
-        <h3 class="sub_title">Where Every Bite Tells a Story!</h3>
-        <button onclick="getFood()" class="button">Open Door</button>
+    <div>
+        <h2>"Check City"</h2>
+        <input type="text" id="input1" placeholder="Enter city name... ">
+        <p id="output1"></p>
+        <button onclick="getCity()" class="button">Checked</button>
     </div>
+    <hr/>
+    <div>
+        <h2>"Check Gender"</h2>
+        <input type="text" id="input2" placeholder="Enter gender... ">
+        <p id="output2"></p>
+        <button onclick="getGender()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Check Traffic Signal"</h2>
+        <input type="text" id="input3" placeholder="Enter traffic light... ">
+        <p id="output3"></p>
+        <button onclick="getLight()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Check Fuel"</h2>
+        <input type="text" id="input4" placeholder="Enter fuel in ltr... ">
+        <p id="output4"></p>
+        <button onclick="getFuel()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Check script run alert"</h2>
+        <button onclick="getAlert()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Creat Mark Sheet"</h2>
+        <input type="number" id="input5" placeholder="Enter marks Sub 1... ">
+        <input type="number" id="input6" placeholder="Enter marks Sub 2... ">
+        <input type="number" id="input7" placeholder="Enter marks Sub 3... ">
+        <p id="output5">Mark Sheet</p>
+        <button onclick="getResult()" class="button">Creat Mark Sheet</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Guess Game"</h2>
+        <input type="number" id="input8" placeholder="Enter Guess number... ">
+        <p id="output6"></p>
+        <button onclick="getGuess()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Check divisible by 3"</h2>
+        <input type="number" id="input9" placeholder="Enter number... ">
+        <p id="output7"></p>
+        <button onclick="getDivisible()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Check Even or Odd"</h2>
+        <input type="number" id="input10" placeholder="Enter number... ">
+        <p id="output8"></p>
+        <button onclick="getEvenOdd()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Check Temperature"</h2>
+        <input type="number" id="input11" placeholder="Enter temperature... ">
+        <p id="output9"></p>
+        <button onclick="getTemperature()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div class="number_check_area">
+        <h2>"Simple Calculator"</h2>
+        <input type="number" id="input12" placeholder="Enter first number... ">
+        <input type="number" id="input13" placeholder="Enter second number... ">
+        <input type="text" id="input14" placeholder="Enter operator (+  -  *  /  **  %)... ">
+        <p id="output10"></p>
+        <button onclick="getCalculator()" class="button">Checked</button>
+    </div>
+
     <script>
-        function getFood(){
-            window.location.href = './resturent.html';
+        function getCity(){
+            const inputElement = document.getElementById("input1")
+            const resultElement = document.getElementById("output1")
+            const value = inputElement.value.toLowerCase()
+            if(value === "karachi"){
+                resultElement.textContent = `Wellcome to city of light. (${value.toUpperCase()})`
+            }
+            else if(value === "lahore"){
+                resultElement.textContent = `Welcome to the heart of Pakistan. (${value.toUpperCase()})`
+            }
+            else if(value === "islamabad"){
+                resultElement.textContent = `Welcome to the capital city. (${value.toUpperCase()})`
+            }
+            else if(value === "peshawar"){
+                resultElement.textContent = `Welcome to the city of flowers. (${value.toUpperCase()})`
+            }
+            else if(value === "quetta"){
+                resultElement.textContent = `Welcome to the fruit garden of Pakistan. (${value.toUpperCase()})`
+            }
+            else{
+                resultElement.textContent = `Not valid city. (${value.toUpperCase()})`
+            }
         }
+
+        function getGender(){
+            const inputElement = document.getElementById("input2")
+            const resultElement = document.getElementById("output2")
+            const value = inputElement.value.toLowerCase()
+            if (value === ""){
+                resultElement.textContent = `please enter gender.`
+            }
+            else if (value === "male"){
+                resultElement.textContent = `Good Morning Sir.`
+            }
+            else if (value === "female"){
+                resultElement.textContent = `Good Morning Ma'am.`
+            }
+            else{
+                resultElement.textContent = `invalid gender`
+            }
+        }
+
+        function getLight(){
+            const inputElement = document.getElementById("input3")
+            const resultElement = document.getElementById("output3")
+            const value = inputElement.value.toLowerCase()
+            if (value === ""){
+                resultElement.textContent = `please enter traffic light color.`
+            }
+            else if (value === "red"){
+                resultElement.textContent = `${value} Must Stop.`
+            }
+            else if (value === "yellow"){
+                resultElement.textContent = `${value} Ready to move.`
+            }
+            else if (value === "green"){
+                resultElement.textContent = `${value} Move now.`
+            }
+            else{
+                resultElement.textContent = `${value} Invalid traffic light color.`
+            }
+        }
+
+        function getFuel(){
+            const inputElement = document.getElementById("input4")
+            const resultElement = document.getElementById("output4")
+            const value = inputElement.value
+            const number = parseFloat(value)
+            if (value === ""){
+                resultElement.textContent = `please enter fuel.`
+            }
+            else if (number < 0.25){
+                resultElement.textContent = `${number} Please refill the fuel in your car.`
+            }
+            else{
+                resultElement.textContent = `${number} Have enough fuel.`
+            }
+        }
+
+        function getAlert(){
+            var a = 4
+            if (++a === 5){
+                alert("A. given condition for variable a is true");
+            }
+            var b = 82;
+            if (b++ === 83){
+                alert("B. given condition for variable b is true");
+            }
+            var c = 12;
+            if (c++ === 13){
+                alert("C. condition 1 is true");
+            }
+            if (c === 13){
+                alert("C. condition 2 is true");
+            }
+            if (++c < 14){
+                alert("C. condition 3 is true");
+            }
+            if(c === 14){
+                alert("C. condition 4 is true");
+            }
+            var materialCost = 20000;
+            var laborCost = 2000;
+            var totalCost = materialCost + laborCost;
+            if (totalCost === laborCost + materialCost){
+                alert("D. The cost equals");
+            }
+            if (true){
+                alert("E. True");
+            }
+            if (false){
+                alert("E. False");
+            }
+            if("car" < "cat"){
+                alert("F. car is smaller than cat");
+            }
+        }
+
+        function getResult(){
+            const inputElement1 = document.getElementById("input5")
+            const inputElement2 = document.getElementById("input6")
+            const inputElement3 = document.getElementById("input7")
+            const resultElement = document.getElementById("output5")
+            const value1 = inputElement1.value
+            const value2 = inputElement2.value
+            const value3 = inputElement3.value
+            const number1 = Number(value1)
+            const number2 = Number(value2)
+            const number3 = Number(value3)
+            const total_marks = 300
+            const obtain_marks = number1 + number2 + number3
+            const percentage = (obtain_marks/300)*100
+            if (percentage.toFixed(2) >= 80){
+                resultElement.innerHTML = `<span style="font-size: 20px; font-weight: bold;">Mark Sheet</span><br><br>
+                Total Marks: ${total_marks}<br>
+                Mark Obtain: ${obtain_marks}<br>
+                Percentage: ${percentage.toFixed(2)}%<br>
+                Grade: A-one<br>
+                Remarks: Excellent`
+            }
+            else if (percentage.toFixed(2) >= 70){
+                resultElement.innerHTML = `<span style="font-size: 20px; font-weight: bold;">Mark Sheet</span><br><br>
+                Total Marks: ${total_marks}<br>
+                Mark Obtain: ${obtain_marks}<br>
+                Percentage: ${percentage.toFixed(2)}%<br>
+                Grade: A<br>
+                Remarks: Good`
+            }
+            else if (percentage.toFixed(2) >= 60){
+                resultElement.innerHTML = `<span style="font-size: 20px; font-weight: bold;">Mark Sheet</span><br><br>
+                Total Marks: ${total_marks}<br>
+                Mark Obtain: ${obtain_marks}<br>
+                Percentage: ${percentage.toFixed(2)}%<br>
+                Grade: B<br>
+                Remarks: You need to improve`
+            }
+            else{
+                resultElement.innerHTML = `<span style="font-size: 20px; font-weight: bold;">Mark Sheet</span><br><br>
+                Total Marks: ${total_marks}<br>
+                Mark Obtain: ${obtain_marks}<br>
+                Percentage: ${percentage.toFixed(2)}%<br>
+                Grade: Fail<br>
+                Remarks: Sorry`
+            }
+
+        }
+
+        function getGuess(){
+            const inputElement = document.getElementById("input8")
+            const resultElement = document.getElementById("output6")
+            const value = inputElement.value
+            const number = Number(value)
+            const secretNumber = Math.floor(Math.random() * 10) + 1;
+            if (value === ""){
+                resultElement.textContent = `Please enter your guess number.`
+            }
+            else if (number === secretNumber) {
+                resultElement.textContent = `Bingo! Correct Guess number ${number}. Secret number was ${secretNumber}`
+            }
+            else if (number + 1 === secretNumber) {
+                resultElement.textContent = `Close enough to the correct number ${number}. Secret number was ${secretNumber}.`;
+            }
+            else if (number - 1 === secretNumber) {
+                resultElement.textContent = `Close enough to the correct number ${number}. Secret number was ${secretNumber}.`;
+            }
+            else{
+                resultElement.textContent = `Oppps! Wrong Guess number ${number}. Secret number was ${secretNumber}`
+            }
+        }
+
+        function getDivisible(){
+            const inputElement = document.getElementById("input9")
+            const resultElement = document.getElementById("output7")
+            const value = inputElement.value
+            const number = Number(value)
+            if (number % 3 == 0){
+                resultElement.textContent = `${number} is divisible by 3.`
+            }
+            else {
+                resultElement.textContent = `${number} is not divisible by 3.`
+            }
+        }
+
+        function getEvenOdd() {
+            const inputElement = document.getElementById("input10")
+            const resultElement = document.getElementById("output8")
+            const value = inputElement.value
+            const number = Number(value)
+            if (value === ""){
+                resultElement.textContent = "Please must be enter number."
+            }
+            else if (number % 2 === 0){
+                resultElement.textContent = `The ${number} is even number.`
+            }
+            else {
+                resultElement.textContent = `The ${number} is odd number.`
+            }
+        }
+
+        function getTemperature(){
+            const inputElement = document.getElementById("input11")
+            const resultElement = document.getElementById("output9")
+            const value = inputElement.value
+            const number = Number(value)
+            if (value === ""){
+                resultElement.textContent = "Please must be enter number."
+            }
+            else if (number > 40){
+                resultElement.textContent = `Today temperatur is ${number}°C. It's too Hot.`
+            }
+            else if (number > 30){
+                resultElement.textContent = `Today temperatur is ${number}°C. It's Normal.`
+            }
+            else if (number > 20){
+                resultElement.textContent = `Today temperatur is ${number}°C. It's Cool.`
+            }
+            else if (number > 10){
+                resultElement.textContent = `Today temperatur is ${number}°C. It's too Cool.`
+            }
+            else{
+                resultElement.textContent = `OMG! Today temperatur is ${number}°C. It's too much Cool.`
+            }
+        }
+
+        function getCalculator() {
+            const inputElement1 = document.getElementById("input12");
+            const inputElement2 = document.getElementById("input13");
+            const inputOperator = document.getElementById("input14");
+            const outputElement = document.getElementById("output10");
+            const value1 = inputElement1.value;
+            const value2 = inputElement2.value;
+            const operator = inputOperator.value;
+            const number1 = Number(value1);
+            const number2 = Number(value2);
+            if (operator === "+"){
+                outputElement.textContent = `Addition: ${number1} + ${number2} = ${number1 + number2}`;
+            } 
+            else if (operator === "-") {
+                outputElement.textContent = `Subtraction: ${number1} - ${number2} = ${number1 - number2}`;
+            }
+            else if (operator === "*") {
+                outputElement.textContent = `Multiply: ${number1} x ${number2} = ${number1 * number2}`;
+            }
+            else if (operator === "/") {
+                outputElement.textContent = `Division: ${number1} / ${number2} = ${(number1 / number2).toFixed(2)}`;
+            }
+            else if (operator === "**") {
+                outputElement.textContent = `Square: ${number1}^${number2} = ${number1 ** number2}`;
+            }
+            else if (operator === "%") {
+                outputElement.textContent = `Reminder: ${number1} % ${number2} = ${number1 % number2}`;
+            }
+            else{
+                outputElement.textContent = "Invalid Operation";
+            }
+        }
+
+
     </script>
+
 </body>
 </html>

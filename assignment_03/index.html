@@ -49,6 +49,18 @@
         .roll{
             margin-bottom: 1.5rem;
         }
+        @media (max-width: 768px){
+            #input1, #input2, #input3, #input4, #input5, #input6, #input7{
+                width: 90%;
+                padding: 0.7rem;
+            }
+            .button{
+                padding: 0.7rem;
+            }
+            .roll{
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 <body class="body">
@@ -98,7 +110,6 @@
         <p id="output6"></p>
         <button onclick="getName()" class="button">Checked</button>
     </div>
-    <hr/>
 
 
     <script>

@@ -32,6 +32,23 @@
         .roll{
             margin-bottom: 1.5rem;
         }
+        #design{
+            width: 100%;
+            padding-right: 2px;
+            padding-left: 2px;
+            margin: auto;
+        }
+        @media (max-width: 768px){
+            .button{
+                padding: 0.7rem;
+            }
+            .roll{
+                font-size: 20px;
+            }
+            #design{
+                width: 95%;
+            }
+        }
     </style>
 </head>
 <body class="body">
@@ -39,18 +56,18 @@
     <h2>Roll No: 00346</h2>
     <h2 class="roll">Topic: Variable</h2>
     <hr/><hr/><hr/>
-    <div>
+    <div id="design">
         <h2>"Variable Declaration"</h2>
         <p>Declear variable 👉 let username;</p>
     </div>
     <hr/>
-    <div>
+    <div id="design">
         <h2>"Value Assign to Variable"</h2>
         <p>Declear variable 👉 let myName;</p>
         <p>Assign value 👉 myName = "Rimsha"</p>
     </div>
     <hr/>
-    <div>
+    <div id="design">
         <h2>"Alert Variable"</h2>
         <p>Declear variable 👉 let message;</p>
         <p>Assign value 👉 message = "hello world"</p>
@@ -58,7 +75,7 @@
         <button onclick="showMessage1()" class="button">Show</button>
     </div>
     <hr/>
-    <div>
+    <div id="design">
         <h2>"Student Bio Data"</h2>
         <p>Declear and assign value to variable 👉 let name = "Jhone Doe"</p>
         <p>Declear and assign value to variable 👉 let age = 15</p>
@@ -69,14 +86,14 @@
         <button onclick="showMessage2()" class="button">Show</button>
     </div>
     <hr/>
-    <div>
+    <div id="design">
         <h2>"Line Break"</h2>
         <p>Declear and assign value to variable 👉 let pizza = "PIZZA\nPIZZ\nPIZ\nPI\nP"</p>
         <p>Popup message 👉 alert(pizza)</p>
         <button onclick="showMessage3()" class="button">Show</button>
     </div>
     <hr/>
-    <div>
+    <div id="design">
         <h2>"Email Address"</h2>
         <p>Declear variable 👉 let email;</p>
         <p>Assign value to variable 👉 email = "rimshaarshad374@gmail.com"</p>
@@ -84,27 +101,27 @@
         <button onclick="showMessage4()" class="button">Show</button>
     </div>
     <hr/>
-    <div>
+    <div id="design">
         <h2>"Book View"</h2>
         <p>Declear and assign value to variable 👉 const book = "A smarter way to learn JavaScript."</p>
         <p>Popup message 👉 alert(`I am trying to learn from the book. ${book}`)</p>
         <button onclick="showMessage5()" class="button">Show</button>
     </div>
     <hr/>
-    <div>
+    <div id="design">
         <h2>"Write through JS"</h2>
         <p>Declear and assign value to variable 👉 let message = "Yah! I can write HTML content through JS"</p>
-        <p>Browswe message 👉 document.getElementById("output").innerHTML = message</p>
+        <p>Browswe message 👉 document.getElementById("output"). innerHTML = message</p>
         <div id="output1"></div>
         <button onclick="showMessage6()" class="button">Show</button>
         <button onclick="hideMessage6()" class="button">Hide</button>
     </div>
     <hr/>
-    <div>
+    <div id="design">
         <h2>"Show Browser & PopPup"</h2>
-        <p>Declear and assign value to variable 👉 let message = "“▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬”"</p>
+        <p>Declear and assign value to variable 👉 let message = "“▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬”"</p>
         <p>Popup message 👉 alert(message)</p>
-        <p>Browswe message 👉 document.getElementById("output").innerHTML = message;</p>
+        <p>Browswe message 👉 document.getElementById("output"). innerHTML = message;</p>
         <div id="output2"></div>
         <button onclick="showMessage7()" class="button">Show</button>
         <button onclick="hideMessage7()" class="button">Hide</button>
@@ -172,7 +189,7 @@
 
 
         function showMessage7(){
-            let message = "“▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬”"
+            let message = "“▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬”"
             alert(message)
             document.getElementById("output2").innerHTML = message;
         }

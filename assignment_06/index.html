@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF, ELSE & ELSE IF STATEMENT,</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .body{
+            width: 100%;
+            height: auto;
+            background-color: black;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+            overflow-x: hidden;
+            color:bisque;
+        }
+        .button{
+            padding: 0.9rem;
+            border: none;
+            border-radius: 0.8rem;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+        }
+        .button:hover{
+            background-color: #ed4444;
+        }
+        #input1, #input2, #input3, #input4, #input5, #input6, #input7, #input8{
+            width: 50%;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            color: darkblue;
+            margin-top: 15px;
+        }
+        .roll{
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 768px){
+            #input1, #input2, #input3, #input4, #input5, #input6, #input7, #input8{
+                width: 90%;
+                padding: 0.7rem;
+            }
+            .button{
+                padding: 0.7rem;
+            }
+            .roll{
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="body">
+    <h1>Name : Rimsha</h1>
+    <h2>Roll No: 00346</h2>
+    <h2 class="roll">Topic: IF...ELSE & ELSE IF STATEMENT</h2>
+    <hr/><hr/><hr/>
+    <div>
+        <h2>"Check character Type"</h2>
+        <input type="text" id="input1" maxlength="1" placeholder="Enter... ">
+        <p id="output1"></p>
+        <button onclick="getCharactor()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Check Larger Number"</h2>
+        <input type="number" id="input2" maxlength="1" placeholder="Enter Number... ">
+        <input type="number" id="input3" maxlength="1" placeholder="Enter Number... ">
+        <p id="output2"></p>
+        <button onclick="getLargeNumber()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Check Number Positive or Negative"</h2>
+        <input type="number" id="input4" placeholder="Enter Number... ">
+        <p id="output3"></p>
+        <button onclick="getPositiveNumber()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Check vowel"</h2>
+        <input type="text" id="input5" maxlength="1" placeholder="Enter alphabet... ">
+        <p id="output4"></p>
+        <button onclick="getVowels()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Check Adim User"</h2>
+        <input type="number" id="input6" placeholder="Enter password... ">
+        <p id="output5"></p>
+        <button onclick="getAdim()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Check Greating"</h2>
+        <input type="number" id="input7" placeholder="Enter hours number... ">
+        <p id="output6"></p>
+        <button onclick="getGreeting()" class="button">Checked</button>
+    </div>
+    <hr/>
+    <div>
+        <h2>"Check Time"</h2>
+        <input type="number" id="input8" placeholder="Enter hours number... ">
+        <p id="output7"></p>
+        <button onclick="getTime()" class="button">Checked</button>
+    </div>
+
+    <script>
+        function getCharactor() {
+            const inputElement = document.getElementById("input1")
+            const resultElement = document.getElementById("output1")
+            const value = inputElement.value
+
+            if (value.length !== 1) {
+                resultElement.textContent = "❗ Please enter exactly one character."
+                return;
+            }
+
+            const charCode = value.charCodeAt(0)
+            if (charCode >= 48 && charCode <= 57){
+                resultElement.textContent = `${value} a number. (ASCII: ${charCode})`
+            }
+            else if (charCode >= 65 && charCode <= 90){
+                resultElement.textContent = `${value} is UpperCase letter. (ASCII: ${charCode})`
+            }
+            else if (charCode >= 97 && charCode <= 122){
+                resultElement.textContent = `${value} is lowerCase letter. (ASCII: ${charCode})`
+            }
+            else{
+                resultElement.textContent = `${value} is neither a number nor an English alphabet letter. (ASCII: ${charCode})`
+            }
+        }
+
+        function getLargeNumber(){
+            const inputElement1 = document.getElementById("input2")
+            const inputElement2 = document.getElementById("input3")
+            const resultElement = document.getElementById("output2")
+            const value1 = inputElement1.value
+            const value2 = inputElement2.value
+            const number1 = Number(value1)
+            const number2 = Number(value2)
+            
+            if (number1 > number2){
+                resultElement.textContent = `The ${number1} is Larger than ${number2}.`
+            }
+            else if (number2 > number1){
+                resultElement.textContent = `The ${number2} is Larger than ${number1}.`
+            }
+            else if (number1 == number2){
+                resultElement.textContent = `Both are equal ${number1} = ${number2}.`
+            }
+        }
+
+        function getPositiveNumber(){
+            const inputElement = document.getElementById("input4")
+            const resultElement = document.getElementById("output3")
+            const value = inputElement.value
+            const number = Number(value)
+            if (number > 0){
+                resultElement.textContent = `The ${number} is positive number.`
+            }
+            else if (number < 0){
+                resultElement.textContent = `The ${number} is negative number.`
+            }
+            else {
+                resultElement.textContent = `The ${number} number.`
+            }
+        }
+
+        function getVowels(){
+            const inputElement = document.getElementById("input5")
+            const resultElement = document.getElementById("output4")
+            const value = inputElement.value.toLowerCase()
+            const vowels = ["a", "e", "i", "o", "u"]
+
+            if (vowels.includes(value)){
+                resultElement.textContent = `The ${value.toUpperCase()} is vowel.`
+            }
+            else{
+                resultElement.textContent = `The ${value.toUpperCase()} is not vowel.`
+            }
+        }
+
+        function getAdim(){
+            const adminPassword = 12345
+            const inputElement = document.getElementById("input6")
+            const resultElement = document.getElementById("output5")
+            const value = inputElement.value
+            if (value === ""){
+                resultElement.textContent = `Please enter your password”`
+            }
+            else if(adminPassword == value){
+                resultElement.textContent = `Correct Password successfully login.`
+            }
+            else{
+                resultElement.textContent = `Incorrect Password please enter correct password`
+            }
+        }
+
+        function getGreeting(){
+            var greeting
+            const inputElement = document.getElementById("input7")
+            const resultElement = document.getElementById("output6")
+            const value = inputElement.value
+
+            if (isNaN(value) || value < 1 || value > 24) {
+                resultElement.textContent = "❗ Please enter a valid hour between 1 and 24.";
+                return;
+            }
+
+            if (value > 0 && value <= 11){
+                resultElement.textContent = `Good Morning`
+            }
+            else if (value >= 12 && value <= 15){
+                resultElement.textContent = `Good Afternoon`
+            }
+            else if (value >= 16 && value <= 19){
+                resultElement.textContent = `Good Evening.`
+            }
+            else {
+                resultElement.textContent = `Good Night.`
+            }
+        }
+
+        function getTime(){
+            const inputElement = document.getElementById("input8")
+            const resultElement = document.getElementById("output7")
+            const value = inputElement.value
+            const time = parseInt(value)
+
+            if (isNaN(time) || time < 0 || time > 2359) {
+                resultElement.textContent = "❗ Please enter a valid hour between 0700 and 1900.";
+                return;
+            }
+
+            const hour = Math.floor(time / 100);
+
+            if (hour > 0 && hour <= 11){
+                resultElement.textContent = `The time is ${hour}am. Good Morning`
+            }
+            else if (hour >= 12 && hour <= 15){
+                resultElement.textContent = `The time is ${hour-12}pm. Good Afternoon`
+            }
+            else if (hour >= 16 && hour <= 19){
+                resultElement.textContent = `The time is ${hour-12}pm. Good Evening.`
+            }
+            else {
+                resultElement.textContent = `The time is ${hour-12}pm. Good Night.`
+            }
+        }
+
+    </script>
+</body>
+</html>
