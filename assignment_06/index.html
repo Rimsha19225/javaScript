@@ -217,16 +217,16 @@
             }
 
             if (value > 0 && value <= 11){
-                resultElement.textContent = `Good Morning`
+                resultElement.textContent = `The time is ${value}am. Good Morning`
             }
             else if (value >= 12 && value <= 15){
-                resultElement.textContent = `Good Afternoon`
+                resultElement.textContent = `The time is ${value}pm. Good Afternoon`
             }
             else if (value >= 16 && value <= 19){
-                resultElement.textContent = `Good Evening.`
+                resultElement.textContent = `The time is ${value}pm. Good Evening.`
             }
             else {
-                resultElement.textContent = `Good Night.`
+                resultElement.textContent = `The time is ${value}pm. Good Night.`
             }
         }
 
